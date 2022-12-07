@@ -56,7 +56,7 @@ body {
   color: goldenrod;
 }
 
-#home>div {
+#home .container {
   border-radius: 75px;
   padding: 50px;
 
@@ -69,41 +69,45 @@ body {
   font-size: 1.35em;
   font-weight: 500;
 
+  position: relative;
+  overflow: hidden;
+
   transition: transform 0.5s;
 }
 
-#home>div:hover {
+#home .container:hover {
   transform: scale(0.95);
 }
 
-#home>div:hover span {
+#home .container:hover span {
   color: transparent;
 
   transition: color 0.25s;
 }
 
-#home>div:hover .view-content {
-  color: var(--black1);
-
-  transition: color 0.5s;
-}
-
-#home>div .view-content {
-  position: absolute;
-
-  color: transparent;
-}
-
-#home>div .view-content>h1 {
+#home> .container .hover-content>h1 {
   font-size: 2em;
 }
 
-#home>div>span>i {
+#home .container>span>i {
   font-size: 1.75em;
 }
 
 #home #about {
   grid-area: about;
+}
+
+#home #about .hover-content {
+  width: 100%;
+  position: absolute;
+
+  color: transparent;
+}
+
+#home #about:hover .hover-content {
+  color: var(--black1);
+
+  transition: color 0.5s;
 }
 
 #home #hobby {
@@ -112,6 +116,66 @@ body {
 
 #home #work {
   grid-area: work;
+}
+
+#home #hobby .hover-content, 
+#home #work .hover-content {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  transition: color 0.25s;
+}
+
+#home #hobby .hover-content,
+#home #work .hover-content {
+  color: transparent;
+}
+
+#home #hobby .hover-content i,
+#home #work .hover-content i {
+  position: absolute;
+  bottom: 15px;
+
+  transform: translateY(500%);
+
+  transition: transform 0.5s;
+}
+
+#home #hobby:hover .hover-content h1, 
+#home #work:hover .hover-content h1 {
+  color: var(--black1);
+
+  animation: horizontal-repeat 5s linear infinite;
+}
+
+#home #hobby:hover .hover-content i,
+#home #work:hover .hover-content i {
+  color: var(--black1);
+
+  font-size: 2em;
+
+  transform: translateY(0);
+}
+
+@keyframes horizontal-repeat {
+  0% {
+    transform: translate(100%);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
 }
 
 #home #social {
