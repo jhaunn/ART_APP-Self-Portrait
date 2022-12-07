@@ -1,8 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); /*font-family: 'Roboto', sans-serif;*/
 
+:root {
+  --black1: #03071e;
+  --white1: #f4f1de;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+}
+
+#home {
+  width: 100vw;
+  height: 100vh;
+  padding: 5px;
+
+  display: grid;
+  grid-template-areas:  
+    "title title title title"
+    "about about hobby work"
+    "about about social social";
+  grid-template-rows: 4fr 3fr 3fr;
+  gap: 5px;
+
+  background-color: var(--black1);
+}
+
+#home div {
+  border-radius: 70px;
+
+  background-color: var(--white1);
+}
+
+#home #title {
+  grid-area: title;
+
+  background-color: transparent;
+  color: var(--white1);
+}
+
+#home #about {
+  grid-area: about;
+}
+
+#home #hobby {
+  grid-area: hobby;
+}
+
+#home #work {
+  grid-area: work;
+}
+
+#home #social {
+  grid-area: social;
 }
