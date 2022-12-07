@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); /*font-family: 'Roboto', sans-serif;*/
 
 :root {
-  --black1: #03071e;
+  --black1: #212529;
+  --black2: #343a40;
+
   --white1: #f4f1de;
 }
 
@@ -12,8 +14,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  background-color: var(--black1);
+}
+
 #home {
-  width: 100vw;
   height: 100vh;
   padding: 5px;
 
@@ -23,22 +28,78 @@
     "about about hobby work"
     "about about social social";
   grid-template-rows: 4fr 3fr 3fr;
-  gap: 5px;
-
-  background-color: var(--black1);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
 }
 
-#home div {
-  border-radius: 70px;
-
-  background-color: var(--white1);
-}
-
-#home #title {
+#home header {
   grid-area: title;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   background-color: transparent;
   color: var(--white1);
+}
+
+#home header span {
+  font-size: 2.75em;
+  font-weight: 700;
+
+  transition: color 0.25s;
+}
+
+#home header span:hover {
+  cursor: default;
+
+  color: goldenrod;
+}
+
+#home>div {
+  border-radius: 75px;
+  padding: 50px;
+
+  background-color: var(--white1);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  font-size: 1.35em;
+  font-weight: 500;
+
+  transition: transform 0.5s;
+}
+
+#home>div:hover {
+  transform: scale(0.95);
+}
+
+#home>div:hover span {
+  color: transparent;
+
+  transition: color 0.25s;
+}
+
+#home>div:hover .view-content {
+  color: var(--black1);
+
+  transition: color 0.5s;
+}
+
+#home>div .view-content {
+  position: absolute;
+
+  color: transparent;
+}
+
+#home>div .view-content>h1 {
+  font-size: 2em;
+}
+
+#home>div>span>i {
+  font-size: 1.75em;
 }
 
 #home #about {
@@ -55,4 +116,14 @@
 
 #home #social {
   grid-area: social;
+}
+
+#about-me {
+  height: 85vh;
+  margin: 0 5px 5px 5px;
+  padding: 40px 50px;
+  border-radius: 75px;
+
+  background-color: var(--black2);
+  color: var(--white1);
 }
