@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); /*font-family: 'Roboto', sans-serif;*/
 
 :root {
-  --black1: #212529;
+  --black1: black;
   --black2: #343a40;
 
   --white1: #f4f1de;
@@ -29,7 +29,7 @@ body {
     "about about social social";
   grid-template-rows: 4fr 3fr 3fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 5px;
 }
 
 #home header {
@@ -64,10 +64,6 @@ body {
 
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
-
-  font-size: 1.35em;
-  font-weight: 500;
 
   position: relative;
   overflow: hidden;
@@ -79,18 +75,20 @@ body {
   transform: scale(0.95);
 }
 
-#home .container:hover span {
+#home .container .initial-content {
+  width: 100%;
+
+  font-size: 1.3em;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#home .container:hover .initial-content {
   color: transparent;
 
   transition: color 0.25s;
-}
-
-#home> .container .hover-content>h1 {
-  font-size: 2em;
-}
-
-#home .container>span>i {
-  font-size: 1.75em;
 }
 
 #home #about {
@@ -99,9 +97,23 @@ body {
 
 #home #about .hover-content {
   width: 100%;
+  height: 100%;
+  padding: 50px;
+
+  text-align: left;
+  line-height: 1.5em;
+  letter-spacing: 0.2em;
+  word-spacing: 0.5em;
+  
   position: absolute;
+  top: 0;
+  left: 0;
 
   color: transparent;
+}
+
+#home #about .hover-content h1 {
+  font-weight: 500;
 }
 
 #home #about:hover .hover-content {
@@ -134,12 +146,9 @@ body {
   align-items: center;
   flex-direction: column;
 
-  transition: color 0.25s;
-}
-
-#home #hobby .hover-content,
-#home #work .hover-content {
   color: transparent;
+
+  transition: color 0.25s;
 }
 
 #home #hobby .hover-content i,
@@ -155,6 +164,7 @@ body {
 #home #hobby:hover .hover-content h1, 
 #home #work:hover .hover-content h1 {
   color: var(--black1);
+  font-weight: 300;
 
   animation: horizontal-repeat 5s linear infinite;
 }
@@ -163,7 +173,7 @@ body {
 #home #work:hover .hover-content i {
   color: var(--black1);
 
-  font-size: 2em;
+  font-size: 1.5em;
 
   transform: translateY(0);
 }
@@ -180,6 +190,33 @@ body {
 
 #home #social {
   grid-area: social;
+}
+
+#home #social .hover-content {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  text-align: center;
+
+
+  color: transparent;
+
+  transition: color 0.25s;
+}
+
+#home #social:hover .hover-content {
+  color: var(--black1);
+}
+
+#home #social .hover-content h1 {
+  letter-spacing: 0.2em;
+  font-weight: 300;
+  font-size: 4em;
 }
 
 #about-me {
