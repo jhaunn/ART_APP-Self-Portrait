@@ -37,6 +37,7 @@ body {
   grid-area: title;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -45,10 +46,10 @@ body {
 }
 
 #home-section header span {
-  font-size: 2.75em;
+  font-size: 4em;
   font-weight: 700;
 
-  transition: color 0.25s;
+  transition: color 0.75s;
 }
 
 #home-section header span:hover {
@@ -94,6 +95,23 @@ body {
 
 #home-section #about {
   grid-area: about;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-section #about .initial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-size: 5em;
+  font-weight: 100;
+
+  animation: enlarge 5s infinite linear;
 }
 
 #home-section #about .hover-content {
@@ -194,6 +212,8 @@ body {
 
   text-align: center;
 
+  display: flex;
+  flex-direction: column;
 
   color: transparent;
 
@@ -203,13 +223,22 @@ body {
 #home-section #social:hover .hover-content {
   color: var(--black1);
 
-  animation: enlarge 3s linear infinite;
 }
 
 #home-section #social .hover-content h1 {
+  margin-bottom: 20px;
+
   letter-spacing: 0.2em;
   font-weight: 300;
-  font-size: 4em;
+  font-size: 3em;
+
+  animation: enlarge 3s linear infinite;
+}
+
+#home-section #social .hover-content i {
+  letter-spacing: 0.2em;
+  font-weight: 300;
+  font-size: 3em;
 }
 
 #hobby-section {
@@ -217,22 +246,28 @@ body {
 }
 
 #hobby-section #manga {
+  height: 100vh;
   width: 1000px;
   padding: 15px;
   margin: 0 auto;
 
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 }
 
 #hobby-section #manga .manga-panel {
-  margin: 1px;
   width: 300px;
-  height: 300px;
 
   background-color: var(--white1);
+
+  transition: transform 1s, box-shadow 0.5s;
+}
+
+#hobby-section #manga .manga-panel:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
 }
 
 @keyframes horizontal-repeat {
