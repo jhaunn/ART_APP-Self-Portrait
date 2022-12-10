@@ -99,6 +99,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: linear-gradient(0deg, rgba(244, 241, 222, 0.75), rgba(244, 241, 222, 0.75)), url(./Images/tenyaiidatalking.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #home-section #about .initial-content {
@@ -145,8 +150,22 @@ body {
   grid-area: hobby;
 }
 
+#home-section #hobby:hover {
+  background: linear-gradient(0deg, rgba(244, 241, 222, 0.75), rgba(244, 241, 222, 0.75)), url(./Images/luckstarsleep.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 #home-section #work {
   grid-area: work;
+}
+
+#home-section #work:hover {
+  background: linear-gradient(0deg, rgba(244, 241, 222, 0.75), rgba(244, 241, 222, 0.75)), url(./Images/animebuttons.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #home-section #hobby .hover-content, 
@@ -253,7 +272,7 @@ body {
 }
 
 #hobby-section #manga {
-  height: 99vh;
+  height: 100vh;
   width: 1000px;
   padding: 15px;
   margin: 0 auto;
@@ -261,7 +280,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
+  align-content: center;
 }
 
 #hobby-section #manga .manga-panel {
@@ -276,6 +296,7 @@ body {
 #hobby-section #manga .manga-panel:hover {
   transform: scale(1.025);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  z-index: 2;
 }
 
 #hobby-section #manga .manga-panel img {
