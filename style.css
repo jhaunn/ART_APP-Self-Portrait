@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); /*font-family: 'Roboto', sans-serif;*/
 
+/* Update color palette */
 :root {
   --black1: #000000;
   --black2: #1F1F1F;
@@ -93,6 +94,7 @@ body {
   transition: color 0.25s;
 }
 
+/* Change bg image */
 #home-section #about {
   grid-area: about;
 
@@ -150,6 +152,7 @@ body {
   grid-area: hobby;
 }
 
+/* Change bg image */
 #home-section #hobby:hover {
   background: linear-gradient(0deg, rgba(244, 241, 222, 0.75), rgba(244, 241, 222, 0.75)), url(./Images/luckstarsleep.gif);
   background-repeat: no-repeat;
@@ -161,6 +164,7 @@ body {
   grid-area: work;
 }
 
+/* Change bg image */
 #home-section #work:hover {
   background: linear-gradient(0deg, rgba(244, 241, 222, 0.75), rgba(244, 241, 222, 0.75)), url(./Images/animebuttons.gif);
   background-repeat: no-repeat;
@@ -358,6 +362,7 @@ body {
   background: linear-gradient(0deg, rgba(244, 241, 222, 0.25), rgba(244, 241, 222, 0.25));
 }
 
+/* Change bg color to black1 and color to white1 */
 #hobby-section #manga .manga-panel .overlay h1 {
   padding: 5px;
 
