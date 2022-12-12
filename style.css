@@ -35,6 +35,8 @@ body {
   grid-template-rows: 4fr 3fr 3fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 5px;
+
+  background-color: var(--black2);
 }
 
 #home-section header {
@@ -275,7 +277,7 @@ body {
 }
 
 #hobby-section {
-  background-color: var(--black1);
+  background: linear-gradient(180deg, var(--black2), var(--white1), var(--white1), var(--white1), var(--white1), var(--white1), var(--white1), var(--black2));
 }
 
 #hobby-section #animanga {
