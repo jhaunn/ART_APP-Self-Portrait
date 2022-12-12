@@ -311,7 +311,7 @@ body {
   background-color: var(--black1);
   color: var(--white1);
 
-  transition: transform 0.5s 1s;
+  transition: transform 0.5s 2s;
 }
 
 #hobby-section #animanga:hover .title {
@@ -319,8 +319,8 @@ body {
 }
 
 #hobby-section #animanga .animanga-panel {
-  width: 19vw;
-  height: 19vh;
+  width: 19%;
+  height: 19%;
 
   position: relative;
 
