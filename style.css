@@ -277,7 +277,7 @@ body {
 }
 
 #hobby-section {
-  background: linear-gradient(180deg, var(--black2), var(--white1), var(--white1), var(--white1), var(--white1), var(--white1), var(--white1), var(--black2));
+  background: transparent;
 }
 
 #hobby-section #animanga {
@@ -294,6 +294,18 @@ body {
   align-content: center;
 
   position: relative;
+}
+
+#hobby-section #animanga:nth-child(1) {
+  padding-top: 15px;
+
+  background: linear-gradient(180deg, var(--black2), var(--white1), var(--white1), var(--white1));
+}
+
+#hobby-section #animanga:nth-child(2) {
+  padding-bottom: 15px;
+
+  background: linear-gradient(180deg, var(--white1), var(--white1), var(--white1), var(--black2));
 }
 
 #hobby-section #animanga .title {
@@ -380,6 +392,42 @@ body {
 #hobby-section #animanga .animanga-panel:hover .overlay h1 {
   color: var(--white1);
   background-color: var(--black1);
+}
+
+#hobby-section #fitness {
+  padding-top: 50px;
+  height: 100vh;
+
+  background-color: var(--black2);
+}
+
+#hobby-section #fitness .title {
+  width: 80%;
+  margin: 0 auto;
+
+  text-align: center;
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.25em;
+  word-spacing: 0.5em;
+
+  color: var(--white1);
+  background-color: var(--black1);
+}
+
+#hobby-section #fitness .content {
+  margin: 50px auto;
+  width: 75%;
+  height: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hobby-section #fitness .content iframe{
+  margin: 15px;
 }
 
 
