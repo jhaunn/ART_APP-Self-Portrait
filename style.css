@@ -308,16 +308,16 @@ body {
   background-color: var(--black1);
   color: var(--white1);
 
-  transition: transform 0.5s 0.5s;
+  transition: transform 0.5s 1s;
 }
 
 #hobby-section #manga:hover .title {
-  transform: translate(100%);
+  transform: translate(120%);
 }
 
 #hobby-section #manga .manga-panel {
-  width: 30vw;
-  height: 30vh;
+  width: 19vw;
+  height: 19vh;
 
   position: relative;
 
@@ -340,6 +340,8 @@ body {
 #hobby-section #manga .manga-panel .overlay {
   position: absolute;
 
+  overflow: hidden;
+
   width: 100%;
   height: 100%;
   padding: 5px;
@@ -350,31 +352,29 @@ body {
 
   text-align: center;
 
-  color: transparent;
-
   background: linear-gradient(0deg, rgba(244, 241, 222, 0.9), rgba(244, 241, 222, 0.5));
 
-  transition: color 0.5s;
+  transition: transform 0.75s;
 }
 
 #hobby-section #manga .manga-panel:hover .overlay {
-  color: var(--black1);
   background: linear-gradient(0deg, rgba(244, 241, 222, 0.25), rgba(244, 241, 222, 0.25));
 }
 
-/* Change bg color to black1 and color to white1 */
 #hobby-section #manga .manga-panel .overlay h1 {
   padding: 5px;
 
   font-weight: 300;
-  background-color: rgba(244, 241, 222, 0);
 
-  transition: background-color 1s;
+  color: transparent;
+  background-color: transparent;
+
+  transition: background-color 1s, color 1s;
 }
 
 #hobby-section #manga .manga-panel:hover .overlay h1 {
-  color: var(--black1);
-  background-color: rgba(244, 241, 222, 1);
+  color: var(--white1);
+  background-color: var(--black1);
 }
 
 
