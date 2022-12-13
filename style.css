@@ -16,11 +16,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-body {
-  background-color: var(--black1);
-
-  overflow-y: scroll;
-  overflow-x: hidden;
+html {
   scroll-behavior: smooth;
 }
 
@@ -78,6 +74,18 @@ body {
   overflow: hidden;
 
   transition: transform 0.5s;
+}
+
+#home-section .container a {
+  width: 90%;
+  height: 90%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+
+  transform: translate(-50%, -50%);
 }
 
 #home-section .container:hover {
@@ -482,7 +490,20 @@ body {
   align-items: center;
   justify-content: center;
 
+  position: relative;
+
   transition: transform 0.5s;
+}
+
+#work-section #web-projects .container a {
+  width: 90%;
+  height: 90%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
 #work-section #web-projects .container h1 {
