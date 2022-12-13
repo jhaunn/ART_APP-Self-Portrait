@@ -17,6 +17,7 @@
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -286,7 +287,7 @@ html {
 }
 
 #hobby-section {
-  background: transparent;
+  background: linear-gradient(180deg, var(--black2), var(--white1), var(--white1), var(--white1), var(--white1), var(--white1), var(--white1), var(--black2));;
 }
 
 #hobby-section #animanga {
@@ -303,20 +304,14 @@ html {
   align-content: center;
 
   position: relative;
-
-  background-color: var(--black2);
 }
 
 #hobby-section #animanga:nth-child(1) {
   padding-top: 15px;
-
-  /* background: linear-gradient(180deg, var(--black2), var(--white1), var(--white1), var(--white1)); */
 }
 
 #hobby-section #animanga:nth-child(2) {
   padding-bottom: 15px;
-
-  /* background: linear-gradient(180deg, var(--white1), var(--white1), var(--white1), var(--black2)); */
 }
 
 #hobby-section #animanga .title {
@@ -336,7 +331,9 @@ html {
   background-color: var(--black1);
   color: var(--white1);
 
-  transition: transform 0.5s 2s;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
+
+  transition: transform 0.5s 1.5s;
 }
 
 #hobby-section #animanga:hover .title {
@@ -408,8 +405,6 @@ html {
 #hobby-section #fitness {
   padding-top: 50px;
   height: 100vh;
-
-  background-color: var(--black2);
 }
 
 #hobby-section #fitness .title {
@@ -425,6 +420,8 @@ html {
 
   color: var(--white1);
   background-color: var(--black1);
+
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
 }
 
 #hobby-section #fitness .content {
@@ -439,6 +436,7 @@ html {
 
 #hobby-section #fitness .content iframe{
   margin: 15px;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
 }
 
 #work-section {
@@ -463,12 +461,12 @@ html {
 
 #work-section #web-projects .title {
   grid-area: title;
-  
-  width: 95%;
-  padding: 35px;
 
-  justify-self: center;
-  align-self: center;
+  border-radius: 75px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   text-align: center;
   font-size: 3em;
@@ -478,7 +476,7 @@ html {
   word-spacing: 0.5em;
 
   color: var(--white1);
-  background-color: var(--black1);
+  background-color: transparent;
 }
 
 #work-section #web-projects .container {
@@ -530,6 +528,76 @@ html {
 
 #work-section #web-projects #movie {
   grid-area: movie;
+}
+
+#work-section #game-projects {
+  height: 100vh;
+  padding: 5px;
+
+  display: grid;
+  grid-template-areas:  
+    "title game-1 game-2"
+    "title game-3 game-4";
+  grid-template-rows: 2fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+
+  background-color: var(--black2);
+}
+
+#work-section #game-projects .container {
+  border-radius: 75px;
+
+  background-color: var(--white1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  transition: transform 0.5s;
+}
+
+#work-section #game-projects .container:hover {
+  transform: scale(0.95);
+}
+
+#work-section #game-projects .title {
+  grid-area: title;
+
+  padding: 50px;
+  border-radius: 75px;
+  
+  text-align: center;
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.25em;
+  word-spacing: 0.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--white1);
+  background-color: transparent;
+}
+
+#work-section #game-projects #game-1 {
+  grid-area: game-1;
+}
+
+#work-section #game-projects #game-2 {
+  grid-area: game-2;
+}
+
+#work-section #game-projects #game-3 {
+  grid-area: game-3;
+}
+
+#work-section #game-projects #game-4 {
+  grid-area: game-4;
 }
 
 @keyframes horizontal-repeat {
