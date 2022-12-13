@@ -20,6 +20,7 @@ body {
   background-color: var(--black1);
 
   overflow-y: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -294,18 +295,20 @@ body {
   align-content: center;
 
   position: relative;
+
+  background-color: var(--black2);
 }
 
 #hobby-section #animanga:nth-child(1) {
   padding-top: 15px;
 
-  background: linear-gradient(180deg, var(--black2), var(--white1), var(--white1), var(--white1));
+  /* background: linear-gradient(180deg, var(--black2), var(--white1), var(--white1), var(--white1)); */
 }
 
 #hobby-section #animanga:nth-child(2) {
   padding-bottom: 15px;
 
-  background: linear-gradient(180deg, var(--white1), var(--white1), var(--white1), var(--black2));
+  /* background: linear-gradient(180deg, var(--white1), var(--white1), var(--white1), var(--black2)); */
 }
 
 #hobby-section #animanga .title {
@@ -430,6 +433,83 @@ body {
   margin: 15px;
 }
 
+#work-section {
+  background-color: transparent;
+}
+
+#work-section #web-projects {
+  height: 100vh;
+  padding: 5px;
+
+  display: grid;
+  grid-template-areas:  
+    "title title title title"
+    "pokedex pokedex jokes jokes"
+    "movie movie hoverboard hoverboard";
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+
+  background-color: var(--black2);
+}
+
+#work-section #web-projects .title {
+  grid-area: title;
+  
+  width: 95%;
+  padding: 35px;
+
+  justify-self: center;
+  align-self: center;
+  
+  text-align: center;
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.25em;
+  word-spacing: 0.5em;
+
+  color: var(--white1);
+  background-color: var(--black1);
+}
+
+#work-section #web-projects .container {
+  border-radius: 75px;
+
+  background-color: var(--white1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.5s;
+}
+
+#work-section #web-projects .container h1 {
+  text-align: center;
+  font-weight: 100;
+  font-size: 4em;
+}
+
+#work-section #web-projects .container:hover {
+  transform: scale(0.95);
+}
+
+#work-section #web-projects #pokedex {
+  grid-area: pokedex;
+}
+
+#work-section #web-projects #jokes {
+  grid-area: jokes;
+}
+
+#work-section #web-projects #hoverboard {
+  grid-area: hoverboard;
+}
+
+#work-section #web-projects #movie {
+  grid-area: movie;
+}
 
 @keyframes horizontal-repeat {
   0% {
