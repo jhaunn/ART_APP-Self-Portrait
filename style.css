@@ -287,7 +287,7 @@ html {
 }
 
 #hobby-section {
-  background: linear-gradient(180deg, var(--black2), var(--white1), var(--white1), var(--white1), var(--white1), var(--white1), var(--white1), var(--black2));;
+  background: linear-gradient(180deg, var(--black2), var(--white1), var(--white1), var(--white1), var(--white1), var(--white1), var(--white1), var(--black2));
 }
 
 #hobby-section #animanga {
@@ -516,18 +516,34 @@ html {
 
 #work-section #web-projects #pokedex {
   grid-area: pokedex;
+
+  background: linear-gradient(180deg, rgba(244, 241, 222, 0.35), rgba(244, 241, 222, 1)), url(./Images/Web/pokedex-web.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 #work-section #web-projects #jokes {
   grid-area: jokes;
+
+  background: linear-gradient(180deg, rgba(244, 241, 222, 0.35), rgba(244, 241, 222, 1)), url(./Images/Web/jokes-web.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 #work-section #web-projects #hoverboard {
   grid-area: hoverboard;
+
+  background: linear-gradient(180deg, rgba(244, 241, 222, 0.35), rgba(244, 241, 222, 1)), url(./Images/Web/hover-web.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 #work-section #web-projects #movie {
   grid-area: movie;
+
+  background: linear-gradient(180deg, rgba(244, 241, 222, 0.35), rgba(244, 241, 222, 1)), url(./Images/Web/movieapp-web.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 #work-section #game-projects {
@@ -539,7 +555,7 @@ html {
     "title game-1 game-2"
     "title game-3 game-4";
   grid-template-rows: 2fr 2fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr;
   gap: 5px;
 
   background-color: var(--black2);
@@ -548,11 +564,13 @@ html {
 #work-section #game-projects .container {
   border-radius: 75px;
 
-  background-color: var(--white1);
+  background-color: transparent;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
 
   position: relative;
 
@@ -561,6 +579,28 @@ html {
 
 #work-section #game-projects .container:hover {
   transform: scale(0.95);
+}
+
+#work-section #game-projects .container .initial-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  background-color: var(--white1);
+
+  transition: transform 1s;
+}
+
+#work-section #game-projects .container:hover .initial-content {
+  transform: translateY(100%);
 }
 
 #work-section #game-projects .title {
@@ -588,16 +628,40 @@ html {
   grid-area: game-1;
 }
 
+#work-section #game-projects #game-1 .initial-content {
+  background: linear-gradient(180deg, rgba(244, 241, 222, 0.35), rgba(244, 241, 222, 1)), url(./Images/Games/game1-game.png);
+  background-position: center;
+  background-size: cover;
+}
+
 #work-section #game-projects #game-2 {
   grid-area: game-2;
+}
+
+#work-section #game-projects #game-2 .initial-content {
+  background: linear-gradient(180deg, rgba(244, 241, 222, 0.35), rgba(244, 241, 222, 1)), url(./Images/Games/game2-game.png);
+  background-position: center;
+  background-size: cover;
 }
 
 #work-section #game-projects #game-3 {
   grid-area: game-3;
 }
 
+#work-section #game-projects #game-3 .initial-content {
+  background: linear-gradient(180deg, rgba(244, 241, 222, 0.35), rgba(244, 241, 222, 1)), url(./Images/Games/game3-game.png);
+  background-position: center;
+  background-size: cover;
+}
+
 #work-section #game-projects #game-4 {
   grid-area: game-4;
+}
+
+#work-section #game-projects #game-4 .initial-content {
+  background: linear-gradient(180deg, rgba(244, 241, 222, 0.35), rgba(244, 241, 222, 1)), url(./Images/Games/game4-game.png);
+  background-position: center;
+  background-size: cover;
 }
 
 @keyframes horizontal-repeat {
