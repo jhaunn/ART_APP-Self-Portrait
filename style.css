@@ -303,32 +303,68 @@ html {
 }
 
 #hobby-section {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+
+  position: relative;
   background: var(--black2);
+}
+
+#hobby-section .btn {
+  position: absolute;
+  z-index: 3;
+
+  font-size: 3em;
+
+  color: var(--black2);
+}
+
+#hobby-section .btn:hover {
+  cursor: pointer;
+}
+
+#hobby-section #left-btn {  
+  top: 50%;
+  left: 75px;
+
+  transform: translateY(-50%);
+}
+
+#hobby-section #right-btn {
+  top: 50%;
+  right: 75px;
+
+  transform: translateY(-50%);
 }
 
 #hobby-section #animanga {
   height: 100vh;
-  padding: 0 15px;
-  margin: 0 auto;
+  width: 100vw;
+  padding: 0 5px;
 
   overflow: hidden;
 
   display: flex;
+  flex-shrink: 0;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;  
   align-content: center;
 
   position: relative;
+  
+  transition: transform 0.5s;
 }
 
-#hobby-section #animanga:nth-child(1) {
+/* #hobby-section #animanga:nth-child(1) {
   padding-top: 15px;
 }
 
 #hobby-section #animanga:nth-child(2) {
   padding-bottom: 15px;
-}
+} */
 
 #hobby-section #animanga .title {
   position: absolute;
