@@ -358,14 +358,6 @@ html {
   transition: transform 0.5s;
 }
 
-/* #hobby-section #animanga:nth-child(1) {
-  padding-top: 15px;
-}
-
-#hobby-section #animanga:nth-child(2) {
-  padding-bottom: 15px;
-} */
-
 #hobby-section #animanga .title {
   position: absolute;
   z-index: 3;
@@ -453,43 +445,6 @@ html {
   color: var(--white1);
   background-color: var(--black1);
 }
-
-/* #hobby-section #fitness {
-  padding-top: 50px;
-  height: 100vh;
-}
-
-#hobby-section #fitness .title {
-  width: 80%;
-  margin: 0 auto;
-
-  text-align: center;
-  font-size: 3em;
-  font-weight: 500;
-  line-height: 1.5em;
-  letter-spacing: 0.25em;
-  word-spacing: 0.5em;
-
-  color: var(--white1);
-  background-color: var(--black1);
-
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
-}
-
-#hobby-section #fitness .content {
-  margin: 50px auto;
-  width: 75%;
-  height: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#hobby-section #fitness .content iframe{
-  margin: 15px;
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
-} */
 
 #work-section {
   background-color: transparent;
